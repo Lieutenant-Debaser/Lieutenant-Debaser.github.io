@@ -1,28 +1,96 @@
 <!DOCTYPE html>
 <html>
-<body style="background-color:#d4d4d4">
-<h1>Lieutenant Debaser</h1>
-<h3>Just some guy on the internet who writes bad code. <a href=https://github.com/lieutenant-debaser>Here's the main GitHub page,</a>
-but you can also take a look at my favorite projects below.</h3>
-<hr>
+<style>
 
-<p><br></p>
+.split-minor {
+	height: 100%;
+	width: 20%;
+	position: fixed;
+	z-index: 0;
+	top: 0;
+	overflow-x: hidden;
+	padding-top: 20px;
+}
 
-<h2>Current Projects</h2>
-<hr style="width:15%;text-align:left;margin-left:0">
-<a href=https://lieutenant-debaser.github.io/lib-g3save/>lib-g3save</a> : C++
-library/program used to edit original main series generation 3 Pokemon game saves.
+.split-major {
+	height: 100%;
+	width: 80%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	overflow-x: hidden;
+	padding-top: 20px;
+}
 
-<p><br><br></p>
+.left {
+	left: 0;
+	background-color: #b2b2b2;
+}
 
-<h2>Previous Projects</h2>
-<hr style="width:15%;text-align:left;margin-left:0">
-<a href=https://github.com/Lieutenant-Debaser/PS1-Disc-Ripper>PS1 Disc Ripper</a>:
-Linux script to copy the data on original PS1 games into a binary ROM and two index files used for
-emulation (.cue/.toc).<b> Currently investigating an issue with the .bin files being overdumps. They
-work in emulators such as PCSXR and ePSXe, but others (mainly Mednafen) will not load them. If you are
-looking for a program to make legal backups of your original Playstation games that not only produces the
-correct <a href="http://redump.org">checksums</a> but also works on Linux, I've found success with the
-program <a href="https://wiki.gnome.org/Apps/Brasero">Brasero</a>.</b>
+.right {
+	right: 0;
+	background-color: #dadada;
+}
+
+.centered-minor {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.centered-major {
+	position: relative;
+	top: 5%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.left-major {
+	position: relative;
+	top: 5%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding-left: 20px;
+	text-align: left;
+}
+
+
+.centered-img img {
+	width: 150px;
+	border-radius: 50%;
+}
+
+</style>
+
+<body>
+<div class="split-minor left">
+	<div class="centered-minor">
+		<div class="centered-img">
+		<img src="resources/profile.png" alt="Profile Picture">
+		<h2>Lieutenant Debaser</h2>
+		<hr>
+		<p>Currently a CS student learning the basics of how to code. Interests include old-school
+		   emulation and video game preservation, game modding, software development for hardware,
+		   and machine learning. Most of my projects are cobbled together messes, but they can be
+		   viewed on my <a href="https://www.github.com/lieutenant-debaser">GitHub</a>.</p>
+	</div>
+</div>
+
+<div class="split-major right">
+	<div class="centered-major">
+		<h2>Featured Projects</h2>
+		<hr>
+	</div>
+	<div class="left-major">
+		<p><b><a href="https://www.github.com/lieutenant-debaser/lib-g3save" style="color: #000000">
+		   lib-g3save</a></b>
+		   : A library/set of functions that can be used to modify the save data of 3rd-generation
+		   Pokemon save games. Currently a work in progress with a lot of untested code and
+	       unimplemented features.</p>
+	</div>
+</div>
 </body>
 </html>
