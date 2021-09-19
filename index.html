@@ -2,6 +2,8 @@
 <html>
 <style>
 
+/* POSITIONING STYLES */
+/* Positioning of the left-hand "about me" area*/
 .split-minor {
 	height: 100%;
 	width: 20%;
@@ -12,9 +14,21 @@
 	padding-top: 20px;
 }
 
+/* Positioning of the right-hand content area*/
 .split-major {
 	height: 100%;
 	width: 80%;
+	position: fixed;
+	z-index: 0;
+	top: 0;
+	overflow-x: hidden;
+	padding-top: 20px;
+}
+
+/* Positioning of black vertical bar separating "about me" and content*/
+.split-shadow {
+	height: 100%;
+	width: 5px;
 	position: fixed;
 	z-index: 1;
 	top: 0;
@@ -22,16 +36,27 @@
 	padding-top: 20px;
 }
 
-.left {
+/* BACKGROUND COLOR & BASE AXIS */
+/* Left-hand "about me" section*/
+.left-style {
 	left: 0;
 	background-color: #b2b2b2;
 }
 
-.right {
+/* Right-hand content section*/
+.right-style {
 	right: 0;
-	background-color: #dadada;
+	background-color: #aee0ff;
 }
 
+/* Separating shadow*/
+.shadow-style {
+	left: 20%;
+	background-color: black;
+}
+
+/* TEXT & IMAGE POSITIONING*/
+/* Content positioning for left-hand section*/
 .centered-minor {
 	position: relative;
 	top: 50%;
@@ -40,15 +65,17 @@
 	text-align: center;
 }
 
+/* Content positioning for right-hand section title text*/
 .centered-major {
 	position: relative;
-	top: 5%;
+	top: 2%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
 }
 
-.left-major {
+/* Content positioning for right-hand section content text*/
+.left-justified-major {
 	position: relative;
 	top: 5%;
 	left: 50%;
@@ -57,7 +84,7 @@
 	text-align: left;
 }
 
-
+/* Content positioning for left-hand profile picture*/
 .centered-img img {
 	width: 150px;
 	border-radius: 50%;
@@ -65,31 +92,38 @@
 
 </style>
 
+<!-- Vertical Line -->
 <body>
-<div class="split-minor left">
+<div class="split-shadow shadow-style">
+</div>
+
+<!-- Left-Hand "About Me" Section -->
+<div class="split-minor left-style">
 	<div class="centered-minor">
 		<div class="centered-img">
 		<img src="resources/profile.png" alt="Profile Picture">
 		<h2>Lieutenant Debaser</h2>
 		<hr>
 		<p>Currently a CS student learning the basics of how to code. Interests include old-school
-		   emulation and video game preservation, game modding, software development for hardware,
+		   emulation and video game preservation, game modding, software development for devices,
 		   and machine learning. Most of my projects are cobbled together messes, but they can be
-		   viewed on my <a href="https://www.github.com/lieutenant-debaser">GitHub</a>.</p>
+		   viewed on my <a href="https://www.github.com/lieutenant-debaser" style="color: black">
+		   GitHub</a> if you are interested.</p>
 	</div>
 </div>
 
-<div class="split-major right">
+<!-- Right-Hand Content Section -->
+<div class="split-major right-style">
 	<div class="centered-major">
 		<h2>Featured Projects</h2>
 		<hr>
 	</div>
-	<div class="left-major">
-		<p><b><a href="https://www.github.com/lieutenant-debaser/lib-g3save" style="color: #000000">
+	<div class="left-justified-major">
+		<p><b><a href="https://www.github.com/lieutenant-debaser/lib-g3save" style="color: black">
 		   lib-g3save</a></b>
 		   : A library/set of functions that can be used to modify the save data of 3rd-generation
 		   Pokemon save games. Currently a work in progress with a lot of untested code and
-	       unimplemented features.</p>
+	       unimplemented features. <i>Written in C++.</i></p>
 	</div>
 </div>
 </body>
